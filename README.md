@@ -34,3 +34,20 @@ TCP 스캔은 TCP 프로토콜을 사용하여 포트를 검사한다. 일반적
 UDP 스캔
 UDP 스캔은 UDP 프로토콜을 사용하여 포트를 검사한다. UDP는 연결 지향적이지 않기 때문에, 
 응답이 없는 경우에도 포트가 열려 있을 가능성이 있다. 이에 따라 UDP 스캔은 TCP 스캔보다 더 어렵고 시간이 많이 소요될 수 있다.
+
+## 스캐너 정리
+
+### 1. masscan Scanner
+- 대량 IP 포트 스캔할 수 있는 인터넷 규모의 포트 스캐너
+
+- 6분 이내에 전체 인터넷을 스캔하여 단일 시스템에서 초당 천만 개의 패킷을 전송할 수 있음
+
+- 과거에는 Nmap을 많이 사용했지만, 큰 범위를 스캔할 때는 속도가 느려져 요즘에는 Masscan을 사용
+
+```sudo
+$ sudo apt-get install gcc git libpcap-dev
+$ git clone https://github.com/robertdavidgraham/masscan
+$ cd masscan
+$ make
+```
+
